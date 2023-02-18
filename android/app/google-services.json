@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "96038492126",
+    "project_id": "fb-auth-bloc-clean",
+    "storage_bucket": "fb-auth-bloc-clean.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96038492126:android:b00ebcfa83d7193b2caf4f",
+        "android_client_info": {
+          "package_name": "com.massimilianoporzio.fb_auth_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96038492126-c30n4tsfttm9e1n4rien6j047fibb06a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsKvbWUbXQ1DT0Hi36gNKFjPT4ogf0HQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96038492126-c30n4tsfttm9e1n4rien6j047fibb06a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
