@@ -29,6 +29,13 @@
             {
               "client_id": "96038492126-c30n4tsfttm9e1n4rien6j047fibb06a.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "96038492126-f9vrjmuo02tr3sm3r9mnksefl2a29jqs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.massimilianoporzio.fbAuthBloc"
+              }
             }
           ]
         }

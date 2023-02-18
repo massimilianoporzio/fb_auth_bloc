@@ -24,12 +24,12 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
+        return android;
+      case TargetPlatform.iOS:
         throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
+          'DefaultFirebaseOptions have not been configured for ios - '
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
-      case TargetPlatform.iOS:
-        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -52,13 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDPoz39PWQtMeY9TJarVcJYQ9FHZcNAt0g',
-    appId: '1:96038492126:ios:f13bf1b9b1412bd42caf4f',
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyAsKvbWUbXQ1DT0Hi36gNKFjPT4ogf0HQU',
+    appId: '1:96038492126:android:b00ebcfa83d7193b2caf4f',
     messagingSenderId: '96038492126',
     projectId: 'fb-auth-bloc-clean',
     storageBucket: 'fb-auth-bloc-clean.appspot.com',
-    iosClientId: '96038492126-f9vrjmuo02tr3sm3r9mnksefl2a29jqs.apps.googleusercontent.com',
-    iosBundleId: 'com.massimilianoporzio.fbAuthBloc',
   );
 }
