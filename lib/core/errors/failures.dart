@@ -1,5 +1,3 @@
-import 'package:equatable/equatable.dart';
-
 class Failure {
   String message;
   Failure({
@@ -7,7 +5,15 @@ class Failure {
   });
 }
 
-class FirebaseFailure extends Failure with EquatableMixin {
+class GenericFailure extends Failure {
+  GenericFailure({super.message = 'Oops! Something went wrong...'});
+}
+
+class LogoutFailure extends Failure {
+  LogoutFailure({super.message = 'Cannot sign out the User. Please, retry.'});
+}
+
+class FirebaseFailure extends Failure {
   final String code;
   final String plugin;
 
@@ -19,7 +25,4 @@ class FirebaseFailure extends Failure with EquatableMixin {
 
   @override
   String toString() => 'FirebaseFailure(code: $code, plugin: $plugin)';
-
-  @override
-  List<Object> get props => [code, plugin];
 }
