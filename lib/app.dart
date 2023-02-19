@@ -1,4 +1,5 @@
 import 'package:fb_auth_bloc/core/presentation/pages/home_page.dart';
+import 'package:fb_auth_bloc/features/auth/presentation/cubits/profile/profile_cubit.dart';
 import 'package:fb_auth_bloc/features/auth/presentation/cubits/signin/signin_cubit.dart';
 import 'package:fb_auth_bloc/features/auth/presentation/cubits/signup/signup_cubit.dart';
 import 'package:fb_auth_bloc/features/auth/presentation/pages/profile_page.dart';
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => sl<SignupCubit>(),
+        ),
+        BlocProvider(
+          create: (context) => sl<ProfileCubit>(),
         ),
       ],
       child: MaterialApp(

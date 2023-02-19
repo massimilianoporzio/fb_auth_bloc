@@ -13,6 +13,10 @@ class LogoutFailure extends Failure {
   LogoutFailure({super.message = 'Cannot sign out the User. Please, retry.'});
 }
 
+class UserNotFoundFailure extends Failure {
+  UserNotFoundFailure({super.message = 'User not Found'});
+}
+
 class FirebaseFailure extends Failure {
   final String code;
   final String plugin;

@@ -33,7 +33,7 @@ class UserModel extends User {
         email: map['email'] ?? '',
         profileImageUrl: map['profileImageUrl'] ?? '',
         point: map['point']?.toInt() ?? 0,
-        rank: UserRank.values.byName(json.decode(map['rank'])));
+        rank: UserRank.values.byName(map['rank']));
   }
 
   String toJson() => json.encode(toMap());
@@ -62,6 +62,7 @@ class UserModel extends User {
   factory UserModel.fromDoc(DocumentSnapshot userDoc) {
     final userData = userDoc.data() as Map<String, dynamic>?;
     //*riassegno id dal userDoc.id
+
     return UserModel.fromMap(userData!).copyWith(id: userDoc.id);
   }
   //NON NULL FIELDS BUT USELESS
