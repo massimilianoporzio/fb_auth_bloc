@@ -1,9 +1,9 @@
 import 'package:fb_auth_bloc/core/presentation/pages/home_page.dart';
-import 'package:fb_auth_bloc/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/presentation/pages/splash_page.dart';
 import 'core/services/service_locator.dart';
+import 'features/auth/presentation/blocs/auth/auth_bloc.dart';
 import 'features/auth/presentation/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 

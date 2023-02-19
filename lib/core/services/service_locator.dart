@@ -5,9 +5,11 @@ import 'package:fb_auth_bloc/features/auth/domain/usecases/get_user_usecase.dart
 import 'package:fb_auth_bloc/features/auth/domain/usecases/signin_usecase.dart';
 import 'package:fb_auth_bloc/features/auth/domain/usecases/signout_usecase.dart';
 import 'package:fb_auth_bloc/features/auth/domain/usecases/signup_usecase.dart';
-import 'package:fb_auth_bloc/features/auth/presentation/bloc/auth_bloc.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
+
+import '../../features/auth/presentation/blocs/auth/auth_bloc.dart';
 
 final sl = GetIt.instance;
 

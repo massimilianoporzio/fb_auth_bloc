@@ -4,7 +4,7 @@ import 'package:fb_auth_bloc/features/auth/presentation/pages/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../features/auth/presentation/bloc/auth_bloc.dart';
+import '../../../features/auth/presentation/blocs/auth/auth_bloc.dart';
 
 class SplashPage extends StatelessWidget {
   static const String routeName = AppRoutes.splash;
