@@ -6,6 +6,7 @@ import 'package:fb_auth_bloc/features/auth/domain/usecases/signin_usecase.dart';
 import 'package:fb_auth_bloc/features/auth/domain/usecases/signout_usecase.dart';
 import 'package:fb_auth_bloc/features/auth/domain/usecases/signup_usecase.dart';
 import 'package:fb_auth_bloc/features/auth/presentation/cubits/signin/signin_cubit.dart';
+import 'package:fb_auth_bloc/features/auth/presentation/cubits/signup/signup_cubit.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
@@ -16,12 +17,17 @@ final sl = GetIt.instance;
 
 Future<void> init() async {
   //blocs/cubits
+  //Auth bloc
   sl.registerFactory<AuthBloc>(() => AuthBloc(
       getUserUseCase: sl<GetUserUseCase>(),
       signOutUseCase: sl<SignoutUseCase>()));
 
+  //login cubi
   sl.registerFactory<SigninCubit>(
       () => SigninCubit(signinUseCase: sl<SigninUseCase>()));
+  //signup cubit
+  sl.registerFactory<SignupCubit>(
+      () => SignupCubit(signupUseCase: sl<SignupUseCase>()));
 
   //*usecases
   //GET USER

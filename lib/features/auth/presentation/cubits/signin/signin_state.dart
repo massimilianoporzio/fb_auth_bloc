@@ -9,22 +9,22 @@ enum SigninStatus {
 
 class SigninState extends Equatable {
   final SigninStatus signinStatus;
-  final Failure failure;
+  final Failure? failure;
 
   const SigninState({
     required this.signinStatus,
-    required this.failure,
+    this.failure,
   });
 
   factory SigninState.initial() {
-    return SigninState(
+    return const SigninState(
       signinStatus: SigninStatus.initial,
-      failure: Failure(message: ''),
+      failure: null,
     );
   }
 
   @override
-  List<Object> get props => [signinStatus, failure];
+  List<Object?> get props => [signinStatus, failure];
 
   @override
   String toString() =>

@@ -15,7 +15,7 @@ class SigninPage extends StatefulWidget {
 }
 
 class _SigninPageState extends State<SigninPage> {
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   AutovalidateMode _autovalidateMode = AutovalidateMode.disabled;
   String? _email, _password;
 
@@ -43,7 +43,7 @@ class _SigninPageState extends State<SigninPage> {
         child: BlocConsumer<SigninCubit, SigninState>(
           listener: (context, state) {
             if (state.signinStatus == SigninStatus.error) {
-              errorDialog(context, state.failure);
+              errorDialog(context, state.failure!);
             }
           },
           builder: (context, state) {
