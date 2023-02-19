@@ -16,9 +16,6 @@ class AuthRepositoryImpl implements AuthRepository {
   });
 
   @override
-  Stream<fbAuth.User?> get user => firebaseAuth.userChanges();
-
-  @override
   Future<Either<Failure, Unit>> signin(
       {required String email, required String password}) async {
     try {
@@ -81,4 +78,7 @@ class AuthRepositoryImpl implements AuthRepository {
       return Left(LogoutFailure());
     }
   }
+
+  @override
+  Stream<fbAuth.User?> get user => firebaseAuth.userChanges();
 }
