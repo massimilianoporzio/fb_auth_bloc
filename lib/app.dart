@@ -1,4 +1,5 @@
 import 'package:fb_auth_bloc/core/presentation/pages/home_page.dart';
+import 'package:fb_auth_bloc/features/auth/presentation/cubits/signin/signin_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/presentation/pages/splash_page.dart';
@@ -19,7 +20,10 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider<AuthBloc>(
           create: (context) => sl<AuthBloc>(),
-        )
+        ),
+        BlocProvider(
+          create: (context) => sl<SigninCubit>(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
